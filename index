@@ -1,0 +1,1136 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#102a43">
+<meta name="description" content="Bảng tổng hợp công thức và tính chất lượng giác Toán 11 - Kết nối tri thức với cuộc sống.">
+<title>Bảng đáp án chuẩn | Toán 11</title>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$']]
+  },
+  svg: { fontCache: 'global' },
+  startup: { typeset: true }
+};
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"></script>
+
+<style>
+:root {
+  --navy: #102a43;
+  --navy-light: #243f5a;
+  --primary: #2563eb;
+  --green: #087f5b;
+  --text: #263548;
+  --muted: #718096;
+  --line: #e2e8f0;
+  --paper: #ffffff;
+  --background: #f3f6fb;
+  --radius: 18px;
+  --shadow: 0 8px 28px rgba(16, 42, 67, .055);
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--text);
+  font-family: Inter, "Segoe UI", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+button, a { font: inherit; }
+a { color: inherit; text-decoration: none; }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(255,255,255,.94);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--line);
+}
+
+.topbar-inner {
+  max-width: 1240px;
+  margin: auto;
+  padding: 13px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 220px;
+}
+
+.brand-icon {
+  width: 43px;
+  height: 43px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--navy);
+  color: white;
+  font-size: 22px;
+  font-weight: 900;
+  box-shadow: 0 5px 12px #102a4324;
+}
+
+.brand-title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 850;
+  letter-spacing: -.25px;
+  color: var(--navy);
+}
+
+.brand-subtitle {
+  margin: 2px 0 0;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 7px;
+}
+
+.nav a, .print-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: white;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 750;
+  transition: .2s ease;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  border-color: #93c5fd;
+  background: #eff6ff;
+  color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.print-btn {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: white;
+}
+
+.print-btn:hover { background: #1d4264; }
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(125deg, #102a43, #164e63 70%, #087f8c);
+  color: white;
+}
+
+.hero::before, .hero::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #ffffff17;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero::before {
+  width: 380px;
+  height: 380px;
+  right: -90px;
+  top: -220px;
+}
+
+.hero::after {
+  width: 250px;
+  height: 250px;
+  right: 90px;
+  bottom: -210px;
+}
+
+.hero-inner {
+  max-width: 1180px;
+  margin: auto;
+  padding: 42px 24px 35px;
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 11px;
+  border: 1px solid #ffffff30;
+  background: #ffffff12;
+  border-radius: 99px;
+  color: #d8f3f0;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 800px;
+  margin: 16px 0 10px;
+  font-size: clamp(27px, 4vw, 42px);
+  line-height: 1.18;
+  letter-spacing: -1.2px;
+}
+
+.hero p {
+  max-width: 690px;
+  margin: 0;
+  color: #d7e5ef;
+  font-size: 14px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 28px;
+  max-width: 850px;
+}
+
+.stat {
+  padding: 13px 16px;
+  border: 1px solid #ffffff24;
+  background: #ffffff0c;
+  border-radius: 14px;
+}
+
+.stat strong {
+  display: block;
+  font-size: 24px;
+  line-height: 1.2;
+  color: white;
+}
+
+.stat span {
+  display: block;
+  margin-top: 5px;
+  color: #d4e3ed;
+  font-size: 11px;
+}
+
+main {
+  width: min(1180px, 100%);
+  margin: auto;
+  padding: 26px 24px 50px;
+}
+
+.contents {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.contents a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  padding: 15px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  box-shadow: 0 3px 10px #102a4305;
+  transition: .2s ease;
+}
+
+.contents a:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: #cbd5e1;
+}
+
+.contents .number {
+  flex: 0 0 38px;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.contents strong {
+  display: block;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.contents small {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 10px;
+}
+
+.c1 .number { background: #fff1f2; color: #be123c; }
+.c2 .number { background: #fffbeb; color: #b45309; }
+.c3 .number { background: #eff6ff; color: #1d4ed8; }
+.c4 .number { background: #f5f3ff; color: #6d28d9; }
+
+.section {
+  --accent: #2563eb;
+  --soft: #eff6ff;
+  --border: #dbeafe;
+  margin-bottom: 24px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  scroll-margin-top: 95px;
+}
+
+.section.s1 { --accent: #be3455; --soft: #fff1f2; --border: #ffe0e6; }
+.section.s2 { --accent: #b7791f; --soft: #fffbeb; --border: #f9e8b4; }
+.section.s3 { --accent: #245fc7; --soft: #eff6ff; --border: #dbeafe; }
+.section.s4 { --accent: #7046b8; --soft: #f5f3ff; --border: #e9ddff; }
+
+.section-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  padding: 24px 26px;
+  border-bottom: 1px solid var(--line);
+}
+
+.section-icon {
+  flex: 0 0 45px;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: var(--soft);
+  color: var(--accent);
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.section-head h2 {
+  margin: 2px 0 5px;
+  color: var(--navy);
+  font-size: clamp(16px, 2vw, 20px);
+  line-height: 1.4;
+}
+
+.section-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.section-body { padding: 24px 26px; }
+
+.subsection { margin-bottom: 27px; }
+.subsection:last-child { margin-bottom: 0; }
+
+.subhead {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 12px;
+  padding: 10px 13px;
+  border-radius: 10px;
+  background: var(--soft);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.subhead::before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 17px;
+  border-radius: 4px;
+  background: var(--accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.grid.three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.grid.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+
+.formula {
+  min-width: 0;
+  padding: 13px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #fbfcfe;
+  border: 1px solid #e7edf4;
+  border-radius: 12px;
+  transition: border-color .2s, background .2s;
+}
+
+.formula:hover {
+  background: white;
+  border-color: #b8cbe0;
+}
+
+.formula .label {
+  color: #526174;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.formula .answer {
+  color: var(--green);
+  font-size: 14px;
+  font-weight: 750;
+  text-align: right;
+}
+
+.formula .answer mjx-container { margin: 0 !important; }
+
+.formula.stacked {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.formula.stacked .answer { text-align: left; }
+
+.formula-note {
+  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.family-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.family {
+  padding: 15px;
+  background: #fcfcff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+.family h4 {
+  margin: 0 0 10px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid var(--line);
+  color: var(--accent);
+  font-size: 12px;
+}
+
+.family-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 0;
+  border-bottom: 1px dashed #e8edf3;
+  font-size: 11px;
+}
+
+.family-row:last-child { border-bottom: 0; }
+.family-row b { color: var(--green); font-weight: 750; }
+
+.graph-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.graph-card {
+  padding: 17px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #fff;
+  min-width: 0;
+}
+
+.graph-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding-bottom: 11px;
+  border-bottom: 1px solid var(--line);
+  color: var(--navy);
+  font-weight: 850;
+  font-size: 14px;
+}
+
+.graph-tag {
+  padding: 3px 8px;
+  border-radius: 7px;
+  background: #f1f5f9;
+  color: #64748b;
+  font-size: 10px;
+  white-space: nowrap;
+}
+
+.graph {
+  width: 100%;
+  height: 180px;
+  display: block;
+  margin-bottom: 13px;
+  border: 1px solid #e9eef5;
+  border-radius: 11px;
+  background: #fbfdff;
+}
+
+.properties {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.property {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 8px 0;
+  border-bottom: 1px dashed #e7edf4;
+  font-size: 11px;
+}
+
+.property:last-child { border-bottom: 0; }
+.property span { color: #65758b; }
+.property b {
+  text-align: right;
+  color: var(--green);
+  font-weight: 750;
+}
+
+.notice {
+  padding: 12px 14px;
+  margin-top: 15px;
+  background: #f0fdfa;
+  border: 1px solid #ccfbf1;
+  border-radius: 11px;
+  color: #115e59;
+  font-size: 11px;
+}
+
+.footer {
+  padding: 23px 24px;
+  background: #fff;
+  border-top: 1px solid var(--line);
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.footer strong { color: var(--navy); }
+
+@media (max-width: 950px) {
+  .topbar-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+  .nav { justify-content: flex-start; }
+  .contents { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .family-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid.four { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .grid.three { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 600px) {
+  .topbar-inner { padding: 12px 15px; }
+  .brand-title { font-size: 12px; }
+  .brand-subtitle { max-width: 280px; line-height: 1.5; }
+  .nav { gap: 6px; }
+  .nav a, .print-btn { padding: 7px 9px; font-size: 11px; }
+  .hero-inner { padding: 31px 18px 25px; }
+  .hero h1 { letter-spacing: -.5px; }
+  .hero p { font-size: 12px; }
+  .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+  .stat { padding: 11px 12px; }
+  .stat strong { font-size: 21px; }
+  main { padding: 18px 12px 35px; }
+  .contents { gap: 8px; }
+  .contents a { padding: 11px 9px; gap: 8px; }
+  .contents .number { width: 31px; height: 31px; flex-basis: 31px; }
+  .contents strong { font-size: 11px; }
+  .contents small { font-size: 9px; }
+  .section-head { padding: 18px 15px; gap: 11px; }
+  .section-icon { width: 38px; height: 38px; flex-basis: 38px; }
+  .section-body { padding: 17px 13px; }
+  .grid, .grid.three, .grid.four, .graph-grid { grid-template-columns: 1fr; }
+  .family-grid { grid-template-columns: 1fr; }
+  .formula { padding: 12px; gap: 8px; }
+  .formula .label { font-size: 11px; }
+  .formula .answer { font-size: 12px; }
+  .family-row { font-size: 11px; }
+  .property { gap: 8px; }
+  .graph-card { padding: 12px; }
+}
+
+@media print {
+  @page { size: A4; margin: 13mm; }
+
+  body {
+    background: white !important;
+    color: black;
+    font-size: 10pt;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .topbar, .contents, .no-print { display: none !important; }
+  .hero { background: white !important; color: black !important; }
+  .hero-inner { padding: 0 0 12px; }
+  .hero h1 { color: #102a43 !important; font-size: 23pt; }
+  .hero p, .eyebrow { color: #475569 !important; }
+  .eyebrow { border-color: #cbd5e1; background: white; }
+  .stats { margin-top: 12px; }
+  .stat { border-color: #cbd5e1; background: white; }
+  .stat strong, .stat span { color: #102a43 !important; }
+  main { width: 100%; padding: 10px 0; }
+  .section {
+    box-shadow: none;
+    border: 1px solid #cbd5e1;
+    margin-bottom: 14px;
+    break-inside: auto;
+  }
+  .section-head { padding: 13px; }
+  .section-body { padding: 13px; }
+  .formula, .family, .graph-card { break-inside: avoid; }
+  .subsection { break-inside: avoid; }
+  .graph { height: 135px; }
+  .footer { padding: 10px; }
+  a { text-decoration: none; }
+}
+</style>
+</head>
+
+<body>
+<header class="topbar no-print">
+  <div class="topbar-inner">
+    <a class="brand" href="#top" aria-label="Về đầu trang">
+      <div class="brand-icon">∑</div>
+      <div>
+        <p class="brand-title">TOÁN 11 · TÀI LIỆU CHUẨN HÓA</p>
+        <p class="brand-subtitle">Kết nối tri thức với cuộc sống</p>
+      </div>
+    </a>
+
+    <nav class="nav" aria-label="Điều hướng các nhóm">
+      <a href="#nhom-1">01 · Góc</a>
+      <a href="#nhom-2">02 · Công thức</a>
+      <a href="#nhom-3">03 · Đồ thị</a>
+      <a href="#nhom-4">04 · Phương trình</a>
+      <button class="print-btn" onclick="window.print()">▤ In / Lưu PDF</button>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <span class="eyebrow">✦ BỘ TÀI LIỆU ÔN TẬP CHƯƠNG I</span>
+    <h1>Bảng đáp án chuẩn xác<br>Hàm số lượng giác và phương trình lượng giác</h1>
+    <p>
+      Hệ thống công thức, tính chất và nghiệm cơ bản Toán 11.
+      Thiết kế để tra cứu nhanh trên lớp, ôn tập và in thành tài liệu.
+    </p>
+
+    <div class="stats">
+      <div class="stat"><strong>28</strong><span>Góc và giá trị lượng giác</span></div>
+      <div class="stat"><strong>22</strong><span>Công thức lượng giác</span></div>
+      <div class="stat"><strong>26</strong><span>Mục đồ thị và tính chất</span></div>
+      <div class="stat"><strong>10</strong><span>Công thức nghiệm</span></div>
+    </div>
+  </div>
+</section>
+
+<main>
+  <nav class="contents" aria-label="Mục lục">
+    <a class="c1" href="#nhom-1">
+      <span class="number">01</span>
+      <span><strong>Góc lượng giác</strong><small>28 công thức</small></span>
+    </a>
+    <a class="c2" href="#nhom-2">
+      <span class="number">02</span>
+      <span><strong>Công thức lượng giác</strong><small>22 công thức</small></span>
+    </a>
+    <a class="c3" href="#nhom-3">
+      <span class="number">03</span>
+      <span><strong>Đồ thị và tính chất</strong><small>4 hàm số</small></span>
+    </a>
+    <a class="c4" href="#nhom-4">
+      <span class="number">04</span>
+      <span><strong>Phương trình lượng giác</strong><small>10 công thức nghiệm</small></span>
+    </a>
+  </nav>
+
+  <!-- NHÓM 1 -->
+  <section class="section s1" id="nhom-1">
+    <div class="section-head">
+      <div class="section-icon">∠</div>
+      <div>
+        <h2>Nhóm 1 — Góc lượng giác và giá trị lượng giác</h2>
+        <p>Đổi đơn vị góc · Đường tròn lượng giác · Hệ thức cơ bản · Công thức liên hệ góc</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+      <div class="subsection">
+        <h3 class="subhead">A. Đổi đơn vị góc</h3>
+        <div class="grid">
+          <div class="formula"><span class="label">A1. Độ sang radian</span><span class="answer">$\displaystyle \alpha^\circ=\frac{\alpha\pi}{180}\text{ rad}$</span></div>
+          <div class="formula"><span class="label">A2. Radian sang độ</span><span class="answer">$\displaystyle \alpha\text{ rad}=\left(\frac{180\alpha}{\pi}\right)^\circ$</span></div>
+        </div>
+        <div class="notice">Quy đổi cơ bản: $\displaystyle 180^\circ=\pi\text{ rad}$.</div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subhead">B. Giá trị lượng giác trên đường tròn đơn vị</h3>
+        <div class="grid four">
+          <div class="formula"><span class="label">B1. $\sin\alpha$</span><span class="answer">$y$</span></div>
+          <div class="formula"><span class="label">B2. $\cos\alpha$</span><span class="answer">$x$</span></div>
+          <div class="formula"><span class="label">B3. $\tan\alpha$</span><span class="answer">$\dfrac{y}{x}$ <span class="formula-note">($x\ne0$)</span></span></div>
+          <div class="formula"><span class="label">B4. $\cot\alpha$</span><span class="answer">$\dfrac{x}{y}$ <span class="formula-note">($y\ne0$)</span></span></div>
+        </div>
+        <div class="notice">Với điểm $M(x;y)$ thuộc đường tròn lượng giác đơn vị, ta có $x^2+y^2=1$.</div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subhead">C. Hệ thức lượng giác cơ bản</h3>
+        <div class="grid three">
+          <div class="formula"><span class="label">C1.</span><span class="answer">$\displaystyle \tan x=\frac{\sin x}{\cos x}$</span></div>
+          <div class="formula"><span class="label">C2.</span><span class="answer">$\displaystyle \cot x=\frac{\cos x}{\sin x}$</span></div>
+          <div class="formula"><span class="label">C3.</span><span class="answer">$\tan x\cdot\cot x=1$</span></div>
+          <div class="formula"><span class="label">C4.</span><span class="answer">$\sin^2x+\cos^2x=1$</span></div>
+          <div class="formula"><span class="label">C5.</span><span class="answer">$\displaystyle 1+\tan^2x=\frac{1}{\cos^2x}$</span></div>
+          <div class="formula"><span class="label">C6.</span><span class="answer">$\displaystyle 1+\cot^2x=\frac{1}{\sin^2x}$</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subhead">D. Công thức liên hệ giữa các góc</h3>
+        <div class="family-grid">
+          <div class="family">
+            <h4>D1. Góc đối nhau</h4>
+            <div class="family-row"><span>$\cos(-x)$</span><b>$\cos x$</b></div>
+            <div class="family-row"><span>$\sin(-x)$</span><b>$-\sin x$</b></div>
+            <div class="family-row"><span>$\tan(-x)$</span><b>$-\tan x$</b></div>
+            <div class="family-row"><span>$\cot(-x)$</span><b>$-\cot x$</b></div>
+          </div>
+          <div class="family">
+            <h4>D2. Góc bù nhau</h4>
+            <div class="family-row"><span>$\sin(\pi-x)$</span><b>$\sin x$</b></div>
+            <div class="family-row"><span>$\cos(\pi-x)$</span><b>$-\cos x$</b></div>
+            <div class="family-row"><span>$\tan(\pi-x)$</span><b>$-\tan x$</b></div>
+            <div class="family-row"><span>$\cot(\pi-x)$</span><b>$-\cot x$</b></div>
+          </div>
+          <div class="family">
+            <h4>D3. Góc phụ nhau</h4>
+            <div class="family-row"><span>$\sin(\frac\pi2-x)$</span><b>$\cos x$</b></div>
+            <div class="family-row"><span>$\cos(\frac\pi2-x)$</span><b>$\sin x$</b></div>
+            <div class="family-row"><span>$\tan(\frac\pi2-x)$</span><b>$\cot x$</b></div>
+            <div class="family-row"><span>$\cot(\frac\pi2-x)$</span><b>$\tan x$</b></div>
+          </div>
+          <div class="family">
+            <h4>D4. Góc hơn kém $\pi$</h4>
+            <div class="family-row"><span>$\sin(\pi+x)$</span><b>$-\sin x$</b></div>
+            <div class="family-row"><span>$\cos(\pi+x)$</span><b>$-\cos x$</b></div>
+            <div class="family-row"><span>$\tan(\pi+x)$</span><b>$\tan x$</b></div>
+            <div class="family-row"><span>$\cot(\pi+x)$</span><b>$\cot x$</b></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NHÓM 2 -->
+  <section class="section s2" id="nhom-2">
+    <div class="section-head">
+      <div class="section-icon">ƒ</div>
+      <div>
+        <h2>Nhóm 2 — Công thức lượng giác</h2>
+        <p>Công thức cộng · Nhân đôi · Hạ bậc · Biến đổi tích thành tổng và tổng thành tích</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+      <div class="subsection">
+        <h3 class="subhead">A. Công thức cộng</h3>
+        <div class="grid">
+          <div class="formula"><span class="label">A1.</span><span class="answer">$\sin(a+b)=\sin a\cos b+\cos a\sin b$</span></div>
+          <div class="formula"><span class="label">A2.</span><span class="answer">$\sin(a-b)=\sin a\cos b-\cos a\sin b$</span></div>
+          <div class="formula"><span class="label">A3.</span><span class="answer">$\cos(a+b)=\cos a\cos b-\sin a\sin b$</span></div>
+          <div class="formula"><span class="label">A4.</span><span class="answer">$\cos(a-b)=\cos a\cos b+\sin a\sin b$</span></div>
+          <div class="formula"><span class="label">A5.</span><span class="answer">$\displaystyle \tan(a+b)=\frac{\tan a+\tan b}{1-\tan a\tan b}$</span></div>
+          <div class="formula"><span class="label">A6.</span><span class="answer">$\displaystyle \tan(a-b)=\frac{\tan a-\tan b}{1+\tan a\tan b}$</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subhead">B. Công thức nhân đôi</h3>
+        <div class="grid">
+          <div class="formula"><span class="label">B1. Dạng hiệu bình phương</span><span class="answer">$\cos 2a=\cos^2a-\sin^2a$</span></div>
+          <div class="formula"><span class="label">B2. Theo $\cos^2a$</span><span class="answer">$\cos 2a=2\cos^2a-1$</span></div>
+          <div class="formula"><span class="label">B3. Theo $\sin^2a$</span><span class="answer">$\cos 2a=1-2\sin^2a$</span></div>
+          <div class="formula"><span class="label">B4.</span><span class="answer">$\sin 2a=2\sin a\cos a$</span></div>
+          <div class="formula"><span class="label">B5.</span><span class="answer">$\displaystyle \tan 2a=\frac{2\tan a}{1-\tan^2a}$</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subhead">C. Công thức hạ bậc</h3>
+        <div class="grid three">
+          <div class="formula"><span class="label">C1.</span><span class="answer">$\displaystyle \sin^2a=\frac{1-\cos 2a}{2}$</span></div>
+          <div class="formula"><span class="label">C2.</span><span class="answer">$\displaystyle \cos^2a=\frac{1+\cos 2a}{2}$</span></div>
+          <div class="formula"><span class="label">C3.</span><span class="answer">$\displaystyle \sin a\cos a=\frac{\sin 2a}{2}$</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subhead">D. Biến đổi tích thành tổng</h3>
+        <div class="grid">
+          <div class="formula"><span class="label">D1.</span><span class="answer">$\displaystyle \sin a\sin b=\frac12[\cos(a-b)-\cos(a+b)]$</span></div>
+          <div class="formula"><span class="label">D2.</span><span class="answer">$\displaystyle \cos a\cos b=\frac12[\cos(a-b)+\cos(a+b)]$</span></div>
+          <div class="formula"><span class="label">D3.</span><span class="answer">$\displaystyle \sin a\cos b=\frac12[\sin(a+b)+\sin(a-b)]$</span></div>
+          <div class="formula"><span class="label">D4.</span><span class="answer">$\displaystyle \cos a\sin b=\frac12[\sin(a+b)-\sin(a-b)]$</span></div>
+        </div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subhead">E. Biến đổi tổng thành tích</h3>
+        <div class="grid">
+          <div class="formula"><span class="label">E1.</span><span class="answer">$\displaystyle \cos a+\cos b=2\cos\frac{a+b}{2}\cos\frac{a-b}{2}$</span></div>
+          <div class="formula"><span class="label">E2.</span><span class="answer">$\displaystyle \cos a-\cos b=-2\sin\frac{a+b}{2}\sin\frac{a-b}{2}$</span></div>
+          <div class="formula"><span class="label">E3.</span><span class="answer">$\displaystyle \sin a+\sin b=2\sin\frac{a+b}{2}\cos\frac{a-b}{2}$</span></div>
+          <div class="formula"><span class="label">E4.</span><span class="answer">$\displaystyle \sin a-\sin b=2\cos\frac{a+b}{2}\sin\frac{a-b}{2}$</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NHÓM 3 -->
+  <section class="section s3" id="nhom-3">
+    <div class="section-head">
+      <div class="section-icon">∿</div>
+      <div>
+        <h2>Nhóm 3 — Đồ thị và tính chất hàm số lượng giác</h2>
+        <p>Đồ thị minh họa · Tập xác định · Tập giá trị · Tính chẵn lẻ · Chu kì · Tính đơn điệu</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+      <div class="graph-grid">
+        <article class="graph-card">
+          <div class="graph-title"><span>1. Hàm số $y=\sin x$</span><span class="graph-tag">Đồ thị A</span></div>
+          <svg id="graph-sin" class="graph" viewBox="0 0 360 190" role="img" aria-label="Đồ thị hàm số y bằng sin x"></svg>
+          <div class="properties">
+            <div class="property"><span>Tập xác định</span><b>$\mathbb R$</b></div>
+            <div class="property"><span>Tập giá trị</span><b>$[-1;1]$</b></div>
+            <div class="property"><span>Tính chẵn, lẻ</span><b>Hàm số lẻ</b></div>
+            <div class="property"><span>Chu kì</span><b>$2\pi$</b></div>
+            <div class="property"><span>Đồng biến</span><b>$(-\frac\pi2+2k\pi;\frac\pi2+2k\pi)$</b></div>
+            <div class="property"><span>Nghịch biến</span><b>$(\frac\pi2+2k\pi;\frac{3\pi}2+2k\pi)$</b></div>
+          </div>
+        </article>
+
+        <article class="graph-card">
+          <div class="graph-title"><span>2. Hàm số $y=\cos x$</span><span class="graph-tag">Đồ thị B</span></div>
+          <svg id="graph-cos" class="graph" viewBox="0 0 360 190" role="img" aria-label="Đồ thị hàm số y bằng cos x"></svg>
+          <div class="properties">
+            <div class="property"><span>Tập xác định</span><b>$\mathbb R$</b></div>
+            <div class="property"><span>Tập giá trị</span><b>$[-1;1]$</b></div>
+            <div class="property"><span>Tính chẵn, lẻ</span><b>Hàm số chẵn</b></div>
+            <div class="property"><span>Chu kì</span><b>$2\pi$</b></div>
+            <div class="property"><span>Đồng biến</span><b>$(-\pi+2k\pi;2k\pi)$</b></div>
+            <div class="property"><span>Nghịch biến</span><b>$(2k\pi;\pi+2k\pi)$</b></div>
+          </div>
+        </article>
+
+        <article class="graph-card">
+          <div class="graph-title"><span>3. Hàm số $y=\tan x$</span><span class="graph-tag">Đồ thị C</span></div>
+          <svg id="graph-tan" class="graph" viewBox="0 0 360 190" role="img" aria-label="Đồ thị hàm số y bằng tan x"></svg>
+          <div class="properties">
+            <div class="property"><span>Tập xác định</span><b>$\mathbb R\setminus\{\frac\pi2+k\pi\}$</b></div>
+            <div class="property"><span>Tập giá trị</span><b>$\mathbb R$</b></div>
+            <div class="property"><span>Tính chẵn, lẻ</span><b>Hàm số lẻ</b></div>
+            <div class="property"><span>Chu kì</span><b>$\pi$</b></div>
+            <div class="property"><span>Đồng biến</span><b>$(-\frac\pi2+k\pi;\frac\pi2+k\pi)$</b></div>
+            <div class="property"><span>Nghịch biến</span><b>Không có</b></div>
+          </div>
+        </article>
+
+        <article class="graph-card">
+          <div class="graph-title"><span>4. Hàm số $y=\cot x$</span><span class="graph-tag">Đồ thị D</span></div>
+          <svg id="graph-cot" class="graph" viewBox="0 0 360 190" role="img" aria-label="Đồ thị hàm số y bằng cot x"></svg>
+          <div class="properties">
+            <div class="property"><span>Tập xác định</span><b>$\mathbb R\setminus\{k\pi\}$</b></div>
+            <div class="property"><span>Tập giá trị</span><b>$\mathbb R$</b></div>
+            <div class="property"><span>Tính chẵn, lẻ</span><b>Hàm số lẻ</b></div>
+            <div class="property"><span>Chu kì</span><b>$\pi$</b></div>
+            <div class="property"><span>Đồng biến</span><b>Không có</b></div>
+            <div class="property"><span>Nghịch biến</span><b>$(k\pi;\pi+k\pi)$</b></div>
+          </div>
+        </article>
+      </div>
+      <div class="notice">
+        Trong các khoảng đơn điệu, $k\in\mathbb Z$. Đồ thị dưới đây có tính chất minh họa; các đường nét đứt biểu diễn tiệm cận đứng của hàm số tang và côtang.
+      </div>
+    </div>
+  </section>
+
+  <!-- NHÓM 4 -->
+  <section class="section s4" id="nhom-4">
+    <div class="section-head">
+      <div class="section-icon">＝</div>
+      <div>
+        <h2>Nhóm 4 — Phương trình lượng giác</h2>
+        <p>Bốn phương trình lượng giác cơ bản và sáu công thức nghiệm đặc biệt</p>
+      </div>
+    </div>
+
+    <div class="section-body">
+      <div class="subsection">
+        <h3 class="subhead">A. Bốn phương trình lượng giác cơ bản</h3>
+        <div class="grid">
+          <div class="formula stacked">
+            <span class="label">A1. Phương trình sin</span>
+            <span class="answer">$\displaystyle \sin u=\sin v\iff\begin{cases}u=v+2k\pi\\u=\pi-v+2k\pi\end{cases}$</span>
+          </div>
+          <div class="formula stacked">
+            <span class="label">A2. Phương trình cos</span>
+            <span class="answer">$\displaystyle \cos u=\cos v\iff\begin{cases}u=v+2k\pi\\u=-v+2k\pi\end{cases}$</span>
+          </div>
+          <div class="formula"><span class="label">A3. Phương trình tan</span><span class="answer">$\tan u=\tan v\iff u=v+k\pi$</span></div>
+          <div class="formula"><span class="label">A4. Phương trình cot</span><span class="answer">$\cot u=\cot v\iff u=v+k\pi$</span></div>
+        </div>
+        <div class="notice">Với các công thức nghiệm ở nhóm này, $k\in\mathbb Z$. Các biểu thức tang và côtang cần thỏa điều kiện xác định.</div>
+      </div>
+
+      <div class="subsection">
+        <h3 class="subhead">B. Sáu công thức nghiệm đặc biệt</h3>
+        <div class="grid three">
+          <div class="formula"><span class="label">B1.</span><span class="answer">$\sin x=0\iff x=k\pi$</span></div>
+          <div class="formula"><span class="label">B2.</span><span class="answer">$\displaystyle \sin x=1\iff x=\frac\pi2+2k\pi$</span></div>
+          <div class="formula"><span class="label">B3.</span><span class="answer">$\displaystyle \sin x=-1\iff x=-\frac\pi2+2k\pi$</span></div>
+          <div class="formula"><span class="label">B4.</span><span class="answer">$\displaystyle \cos x=0\iff x=\frac\pi2+k\pi$</span></div>
+          <div class="formula"><span class="label">B5.</span><span class="answer">$\cos x=1\iff x=2k\pi$</span></div>
+          <div class="formula"><span class="label">B6.</span><span class="answer">$\cos x=-1\iff x=\pi+2k\pi$</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <strong>BỘ TÀI LIỆU ĐÁP ÁN CHUẨN HÓA</strong><br>
+  Ôn tập cuối Chương I · Toán 11 · Kết nối tri thức với cuộc sống
+</footer>
+
+<script>
+/* Vẽ đồ thị bằng SVG thuần, không cần thư viện bổ sung. */
+(function () {
+  const NS = "http://www.w3.org/2000/svg";
+  const W = 360, H = 190;
+  const left = 28, right = 344, top = 16, bottom = 164;
+  const midY = (top + bottom) / 2;
+  const scaleY = 55;
+  const xMin = -2 * Math.PI, xMax = 2 * Math.PI;
+  const sx = x => left + (x - xMin) / (xMax - xMin) * (right - left);
+  const sy = y => midY - y * scaleY;
+
+  function element(tag, attrs, parent) {
+    const el = document.createElementNS(NS, tag);
+    Object.entries(attrs || {}).forEach(([key, value]) => el.setAttribute(key, value));
+    if (parent) parent.appendChild(el);
+    return el;
+  }
+
+  function text(svg, x, y, value, attrs = {}) {
+    const el = element("text", {
+      x, y, fill: "#718096", "font-size": 10,
+      "text-anchor": "middle", ...attrs
+    }, svg);
+    el.textContent = value;
+    return el;
+  }
+
+  function setup(svg) {
+    svg.replaceChildren();
+
+    // Lưới ngang
+    [-1, 0, 1].forEach(y => {
+      element("line", {
+        x1: left, y1: sy(y), x2: right, y2: sy(y),
+        stroke: y === 0 ? "#94a3b8" : "#e5edf5",
+        "stroke-width": y === 0 ? 1.3 : 1,
+      }, svg);
+    });
+
+    // Các vạch dọc theo bội của pi/2
+    for (let k = -4; k <= 4; k++) {
+      const x = k * Math.PI / 2;
+      const px = sx(x);
+      element("line", {
+        x1: px, y1: top, x2: px, y2: bottom,
+        stroke: "#e5edf5", "stroke-width": 1
+      }, svg);
+
+      if (k % 2 === 0) {
+        const label = k === 0 ? "O" :
+          (k < 0 ? "−" : "") + (Math.abs(k) === 2 ? "π" : Math.abs(k) + "π");
+        text(svg, px, bottom + 15, label, { "font-size": 9 });
+      } else {
+        const label = (k < 0 ? "−" : "") + "π/2";
+        text(svg, px, bottom + 15, label, { "font-size": 8 });
+      }
+    }
+
+    // Trục tung và nhãn
+    element("line", {
+      x1: sx(0), y1: top, x2: sx(0), y2: bottom,
+      stroke: "#94a3b8", "stroke-width": 1.3
+    }, svg);
+
+    text(svg, left - 8, sy(1) + 3, "1", { "font-size": 9 });
+    text(svg, left - 8, sy(-1) + 3, "−1", { "font-size": 9 });
+    text(svg, right - 3, midY - 8, "x", { "font-size": 10 });
+    text(svg, sx(0) + 10, top + 4, "y", { "font-size": 10 });
+  }
+
+  function drawContinuous(svg, fn, color) {
+    let d = "";
+    let drawing = false;
+
+    for (let px = left; px <= right; px += 1.5) {
+      const x = xMin + (px - left) / (right - left) * (xMax - xMin);
+      const y = fn(x);
+      const py = sy(y);
+
+      if (!Number.isFinite(y) || Math.abs(y) > 1.3 || py < top || py > bottom) {
+        drawing = false;
+        continue;
+      }
+
+      d += (drawing ? " L " : " M ") + px.toFixed(2) + " " + py.toFixed(2);
+      drawing = true;
+    }
+
+    element("path", {
+      d, fill: "none", stroke: color,
+      "stroke-width": 2.5, "stroke-linecap": "round",
+      "stroke-linejoin": "round"
+    }, svg);
+  }
+
+  function drawAsymptotes(svg, values) {
+    values.forEach(x => {
+      const px = sx(x);
+      if (px < left || px > right) return;
+      element("line", {
+        x1: px, y1: top, x2: px, y2: bottom,
+        stroke: "#aab8c8", "stroke-width": 1.2,
+        "stroke-dasharray": "5 4"
+      }, svg);
+    });
+  }
+
+  function drawPeriodic(svg, fn, color, period, offset) {
+    // Chia đường cong thành các nhánh để tránh nối xuyên qua tiệm cận.
+    const count = Math.ceil((xMax - xMin) / period);
+    for (let i = -count; i <= count; i++) {
+      const a = i * period + offset + 0.035;
+      const b = (i + 1) * period + offset - 0.035;
+      let d = "";
+      let drawing = false;
+
+      for (let x = Math.max(a, xMin); x <= Math.min(b, xMax); x += 0.025) {
+        const y = fn(x);
+        if (!Number.isFinite(y) || Math.abs(y) > 2.5) {
+          drawing = false;
+          continue;
+        }
+
+        const px = sx(x), py = sy(y);
+        if (py < top - 3 || py > bottom + 3) {
+          drawing = false;
+          continue;
+        }
+
+        d += (drawing ? " L " : " M ") + px.toFixed(2) + " " + py.toFixed(2);
+        drawing = true;
+      }
+
+      if (d) element("path", {
+        d, fill: "none", stroke: color, "stroke-width": 2.5,
+        "stroke-linecap": "round", "stroke-linejoin": "round"
+      }, svg);
+    }
+  }
+
+  const sin = document.getElementById("graph-sin");
+  setup(sin);
+  drawContinuous(sin, Math.sin, "#2563eb");
+
+  const cos = document.getElementById("graph-cos");
+  setup(cos);
+  drawContinuous(cos, Math.cos, "#ea580c");
+
+  const tan = document.getElementById("graph-tan");
+  setup(tan);
+  const tanAsym = [];
+  for (let k = -3; k <= 3; k++) tanAsym.push(Math.PI / 2 + k * Math.PI);
+  drawAsymptotes(tan, tanAsym);
+  drawPeriodic(tan, Math.tan, "#059669", Math.PI, -Math.PI / 2);
+
+  const cot = document.getElementById("graph-cot");
+  setup(cot);
+  const cotAsym = [];
+  for (let k = -3; k <= 3; k++) cotAsym.push(k * Math.PI);
+  drawAsymptotes(cot, cotAsym);
+  drawPeriodic(cot, x => 1 / Math.tan(x), "#7c3aed", Math.PI, 0);
+})();
+
+/* Đảm bảo công thức mới được MathJax xử lý khi thư viện đã sẵn sàng. */
+window.addEventListener("load", function () {
+  if (window.MathJax && window.MathJax.typesetPromise) {
+    window.MathJax.typesetPromise();
+  }
+});
+</script>
+</body>
+</html>
